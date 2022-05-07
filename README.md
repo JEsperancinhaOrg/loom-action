@@ -26,6 +26,10 @@ Action to support Loom JDK
 docker build -t test  --build-arg LINUX=ubuntu:22.10 --build-arg LOOM=19-loom+6-625 .
 ```
 
+```shell
+docker build -t test .
+```
+
 ## Example projects
 
 - [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Good%20Story%20🐉&color=informational)](https://github.com/jesperancinha/good-story)
