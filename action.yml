@@ -1,0 +1,15 @@
+name: 'JEsperancinhaOrg Loom Action'
+description: 'Allows usage of the Java Loom JDK in GitHub Pipelines'
+author: 'João Esperancinha <jofisaes@gmail.com>'
+branding:
+    icon: 'package'
+    color: 'green'
+inputs:
+    versions:
+        linux: 22.10
+        loom: 19-loom+6-625
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.versions }}
