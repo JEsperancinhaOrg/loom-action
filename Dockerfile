@@ -10,5 +10,3 @@ RUN mv jdk-19 loom-jdk
 RUN rm *.tar.gz
 ENV JAVA_HOME=/loom-jdk
 ENV PATH=/loom-jdk/bin:$PATH
-RUN echo $WORKDIR
-ENTRYPOINT ["java","-version"]
