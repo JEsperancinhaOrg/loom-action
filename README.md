@@ -35,6 +35,13 @@ docker build -t test .
 
 - [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=Good%20Story%20🐉&color=informational)](https://github.com/jesperancinha/good-story)
 
+
+## Development notes
+
+```shell
+npm i -g @vercel/ncc
+```
+
 ## References
 
 - [Project Loom Downloads](http://jdk.java.net/loom/)

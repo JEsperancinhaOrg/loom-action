@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "init": "tsc --init"
+    "init": "tsc --init",
+    "package": "ncc build --source-map",
+    "dist": "npm run build && npm run package"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
   "devDependencies": {
     "@types/node": "^17.0.31",
     "@types/tar-fs": "^2.0.1",
+    "@vercel/ncc": "^0.33.4",
     "npm-prepare-dist": "^0.4.0",
     "typescript": "^4.6.4"
   }

@@ -29,3 +29,7 @@ hs_err_pid*
 ## Node
 node_modules
 loom-jdk
+index.js
+!dist/index.js
+!dist/index.js.map
+!dist/sourcemap-register.js
