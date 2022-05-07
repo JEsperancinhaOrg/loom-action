@@ -25,3 +25,6 @@ hs_err_pid*
 ## Intellij Jetbrains Idea
 .idea
 *.iml
+
+## Node
+node_modules
