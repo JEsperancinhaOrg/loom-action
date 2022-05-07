@@ -1,10 +1,12 @@
 {
   "name": "loom-action",
   "version": "1.0.0",
-  "description": "[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/JEsperancinhaOrg/loom-action) [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=loom-action☕️&color=informational)](https://github.com/JEsperancinhaOrg/loom-action) [![GitHub release](https://img.shields.io/github/release/JEsperancinhaOrg/loom-action.svg)](https://github.com/marketplace/actions/jesperancinhaorg-loom-action) [![GitHub release](https://img.shields.io/github/v/release/JEsperancinhaOrg/loom-action?color=green&include_prereleases&label=pre-release)](https://github.com/marketplace/actions/jesperancinhaorg-loom-action)",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "init": "tsc --init"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,11 @@
     "path": "^0.12.7",
     "tar-fs": "^2.1.1",
     "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@types/tar-fs": "^2.0.1",
+    "npm-prepare-dist": "^0.4.0",
+    "typescript": "^4.6.4"
   }
 }

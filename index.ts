@@ -1,13 +1,12 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
-const http = require('https'); // or 'https' for https:// URLs
-const fs = require('fs');
-const path = require("path");
-const tar = require('tar-fs');
-const zlib = require('zlib');
+import core from "@actions/core";
+import http from "https";
+import fs from "fs";
+import path from "path";
+import tar from "tar-fs";
+import zlib from "zlib";
 
-confLoom = core.getInput("loom")
-loom = confLoom ? confLoom : "19-loom+6-625"
+const confLoom = core.getInput("loom")
+const loom = confLoom ? confLoom : "19-loom+6-625"
 const file = fs.createWriteStream("openjdk-19.tar.gz");
 let downloadFile = "https://download.java.net/java/early_access/loom/6/openjdk-" + loom + "_linux-x64_bin.tar.gz";
 console.log("Downloading file at " + downloadFile + ".")
