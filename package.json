@@ -20,6 +20,8 @@
     "@actions/core": "^1.8.0",
     "@actions/github": "^5.0.1",
     "fs": "^0.0.1-security",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "tar-fs": "^2.1.1",
+    "zlib": "^1.0.5"
   }
 }
