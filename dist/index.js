@@ -6,17 +6,40 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 
 "use strict";
 
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const core_1 = __importDefault(__nccwpck_require__(2186));
+const core = __importStar(__nccwpck_require__(2186));
 const https_1 = __importDefault(__nccwpck_require__(5687));
 const fs_1 = __importDefault(__nccwpck_require__(7147));
 const path_1 = __importDefault(__nccwpck_require__(1017));
 const tar_fs_1 = __importDefault(__nccwpck_require__(366));
 const zlib_1 = __importDefault(__nccwpck_require__(9796));
-const confLoom = core_1.default.getInput("loom");
+const confLoom = core.getInput("loom");
 const loom = confLoom ? confLoom : "19-loom+6-625";
 const file = fs_1.default.createWriteStream("openjdk-19.tar.gz");
 let downloadFile = "https://download.java.net/java/early_access/loom/6/openjdk-" + loom + "_linux-x64_bin.tar.gz";
@@ -35,10 +58,10 @@ https_1.default.get(downloadFile, function (response) {
             const absolutePath = path_1.default.resolve(loomJdkJdk19);
             console.log("Setting:");
             console.log("JAVA_HOME=" + absolutePath);
-            core_1.default.exportVariable('JAVA_HOME', absolutePath);
+            core.exportVariable('JAVA_HOME', absolutePath);
             let newPath = absolutePath + "/bin:" + process.env.PATH;
             console.log("PATH=" + newPath);
-            core_1.default.exportVariable('PATH', newPath);
+            core.exportVariable('PATH', newPath);
         });
     });
 });

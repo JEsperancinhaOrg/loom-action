@@ -1,4 +1,4 @@
-import core from "@actions/core";
+import * as core from "@actions/core";
 import http from "https";
 import fs from "fs";
 import path from "path";
