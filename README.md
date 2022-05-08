@@ -18,7 +18,7 @@ Action to support Loom JDK
 ## Example usage
 
 ```yml
--   uses: jesperancinhaorg/loom-action@v0.0.0-alfa-a
+-   uses: jesperancinhaorg/loom-action@v0.0.0-alfa-j
 ```
 
 ## Testing the image
