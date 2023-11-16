@@ -30,7 +30,7 @@
     "zlib": "^1.0.5"
   },
   "devDependencies": {
-    "@types/node": "^20.9.0",
+    "@types/node": "^20.9.1",
     "@types/tar-fs": "^2.0.4",
     "@vercel/ncc": "^0.38.1",
     "npm-prepare-dist": "^0.4.1",
