@@ -1,4 +1,8 @@
+b: build test
+build:
+	yarn
+	npm run build
 test:
 	rm -rf loom-jdk
-	rm openjdk-19.tar.gz
+	if [ -f openjdk-19.tar.gz]; then rm openjdk-19.tar.gz; fi; \
 	node index.js
