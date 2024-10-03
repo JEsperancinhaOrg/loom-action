@@ -33,3 +33,4 @@ index.js
 !dist/index.js
 !dist/index.js.map
 !dist/sourcemap-register.js
+yarn.lock
